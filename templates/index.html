@@ -22,7 +22,7 @@
         {% block header %}
             <header>
                 <div class="header-left">
-                    <a href="{{ config.base_url }}" class="logo">{{ config.title }}</a>
+                    <a href="{{ config.base_url | safe }}" class="logo">{{ config.title }}</a>
                 </div>
                 <div class="header-right">
                     <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
@@ -39,14 +39,14 @@
                         {% if config.extra.github %}
                         <li class="nav">
                             <a itemprop="url" href="https://github.com/{{ config.extra.github }}">
-                                <img class="icon" src="{{ config.base_url }}/icons/github.svg" alt="Github">
+                                <img class="icon" src="{{ config.base_url | safe }}/icons/github.svg" alt="Github">
                             </a>
                         </li>
                         {% endif %}
                         {% if config.extra.twitter %}
                         <li class="nav">
                             <a itemprop="url" href="https://twitter.com/{{ config.extra.twitter }}">
-                                <img class="icon" src="{{ config.base_url }}/icons/twitter.svg" alt="Twitter">
+                                <img class="icon" src="{{ config.base_url | safe }}/icons/twitter.svg" alt="Twitter">
                             </a>
                         </li>
                         {% endif %}
